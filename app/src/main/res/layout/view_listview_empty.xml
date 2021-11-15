@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_empty_rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/blank_1"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/transparent" />
+
+    <LinearLayout
+        android:id="@+id/view_empty_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/blank_1"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/toast_info"
+            android:tint="@color/color_default_gray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:text="空空如也"
+            android:textColor="@color/color_default_gray"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/blank_2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h100"
+        android:layout_below="@id/view_empty_ll"
+        android:background="@color/transparent" />
+
+</RelativeLayout>

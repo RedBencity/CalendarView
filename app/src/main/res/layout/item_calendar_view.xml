@@ -1,0 +1,88 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/holiday"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@mipmap/calendar_holiday"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/circle"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/calendar_item_background"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.calendar.CalendarTextView
+            android:id="@+id/day"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="21dp">
+
+        <com.calendar.RedSpotView
+            android:id="@+id/red_spot"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_centerHorizontal="true"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingEnd="3dp"
+            android:paddingStart="3dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <com.calendar.CalendarTextView
+                    android:id="@+id/china_day"
+                    android:layout_width="20dp"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true" />
+
+                <com.calendar.CalendarImageView
+                    android:id="@+id/calendar_weather_image"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+
+            <com.calendar.CalendarTextView
+                android:id="@+id/one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp" />
+
+            <com.calendar.CalendarTextView
+                android:id="@+id/two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp" />
+
+            <com.calendar.CalendarTextView
+                android:id="@+id/three"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp" />
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>
