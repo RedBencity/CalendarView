@@ -13,6 +13,7 @@ import android.widget.ExpandableListView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -28,12 +29,14 @@ public class MainActivity extends AppCompatActivity {
     private ExpandableListView listView;
     private CalendarLayout calendarLayout;
     private RelativeLayout emptyLayout;
+    private TextView clickDateStr;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         calendarDateView = findViewById(R.id.calendar_date_view);
+        clickDateStr = findViewById(R.id.date_str);
         geographyPresenter = new GeographyPresenter();
         holidayMaps = new HashMap<>();
         calendarLayout = findViewById(R.id.calendar_layout);
@@ -275,6 +278,10 @@ public class MainActivity extends AppCompatActivity {
         });
 
         calendarDateView.setOnItemClickListener((view, position, bean, isFullScreen) -> {
+            String day = bean.getYear() + "-"
+                    + (bean.getMouth() < 10 ? "0" + bean.getMouth() : bean.getMouth()) + "-"
+                    + (bean.getDay() < 10 ? "0" + bean.getDay() : bean.getDay());
+            clickDateStr.setText(day);
         });
         final int maxDistance = -(int) getResources().getDimension(R.dimen.h80);
         final int mixDistance = 0;
