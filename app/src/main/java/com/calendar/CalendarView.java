@@ -15,7 +15,7 @@ public class CalendarView extends ViewGroup {
     private int selectPosition = -1;
     private CalendarAdapter adapter;
     private int row = 6;
-    private int column = 7;
+    private final int column = 7;
     private int openItemHeight;
     private List<CalendarInfo> calendarInfoList;
     private boolean isFullScreen = false;

@@ -14,8 +14,8 @@
 
     <LinearLayout
         android:id="@+id/circle"
-        android:layout_width="18dp"
-        android:layout_height="18dp"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/calendar_item_background"
         android:gravity="center"

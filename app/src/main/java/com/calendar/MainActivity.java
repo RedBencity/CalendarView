@@ -120,6 +120,7 @@ public class MainActivity extends AppCompatActivity {
                 List<String> stringList = new ArrayList<>();
                 if (stringList != null) {
                     ArrayList<String> names = new ArrayList<>();
+                    names.add("测试文本测试文本测试文本");
                     for (int i = 0; i < stringList.size(); i++) {
                         names.add("test test");
                     }
@@ -273,11 +274,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        calendarDateView.setOnItemClickListener(new CalendarView.OnItemClickListener() {
-            @Override
-            public void onItemClick(View view, int position, CalendarInfo bean,
-                                    boolean isFullScreen) {
-            }
+        calendarDateView.setOnItemClickListener((view, position, bean, isFullScreen) -> {
         });
         final int maxDistance = -(int) getResources().getDimension(R.dimen.h80);
         final int mixDistance = 0;

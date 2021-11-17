@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="calendar_item_view_height">30dp</dimen>
-    <dimen name="calendar_date">10dp</dimen>
-    <dimen name="calendar_china_date">6dp</dimen>
-    <dimen name="calendar_text">6dp</dimen>
+    <dimen name="calendar_item_view_height">40dp</dimen>
+    <dimen name="calendar_date">15sp</dimen>
+    <dimen name="calendar_china_date">12sp</dimen>
+    <dimen name="calendar_text">12sp</dimen>
     <dimen name="h130">130dp</dimen>
     <dimen name="h100">100dp</dimen>
     <dimen name="h80">80dp</dimen>
